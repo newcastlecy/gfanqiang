@@ -1,7 +1,7 @@
 #labels 关於保安问题
 = 工作中 =
 
-将会尽快完成Wiki
+将会尽快完成Wiki编写的工作
 
 
 = Details =
