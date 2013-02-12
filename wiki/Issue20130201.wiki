@@ -1,0 +1,10 @@
+#2013年2月1日晚上发生了什麽事？
+
+= Introduction =
+
+2013年约中国时间晚上9时，G翻墙GoogleCode项目遭关闭
+
+
+= Details =
+
+约中国时间晚上9时，G翻墙GoogleCode?项目遭关闭，自由网络研究中心立即紧急去信Google交涉，对方回应是因为我们没有上传源码，违反了使用条款(事实上我们一直在用gfangqiang-update来做Repo，这个googlecode项目是留作进行APPID更新)，我们回应G翻墙是基於PHP脚本，只要下载发行包就会得到源码，同时询问怎样在被关闭帐户的情况下上传到Repo以重新激活项目(我们以为连SVN也关闭了)；2月2日凌晨1时正式重启。谢谢Googlecode客服Jason Hall的帮忙。在我们找到方法同步gfanqiang,gfangqiang(最早期的id，拼音拼错了)和gfangqiang-update三个项目的SVN前，请以gfangqiang-update抓取最新源码，無视这里的Repo，谢谢。
