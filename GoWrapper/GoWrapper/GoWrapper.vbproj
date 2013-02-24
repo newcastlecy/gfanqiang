@@ -146,6 +146,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gfanqiang.ico" />
+    <None Include="ico\youtube.png" />
+    <None Include="ico\ifq.png" />
+    <None Include="ico\hkreporter.png" />
+    <None Include="ico\fb.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

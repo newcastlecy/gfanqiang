@@ -12,14 +12,14 @@ Public Class GoWrapper
     Private GoAgent As Process = New Process()
     Private originalPAC As String
     Private GoPAC As String = "http://127.0.0.1:8965/proxy.pac"
-    Private GoTitle As String = "G翻牆懶人一键翻墙器"
+    Private GoWrapperTitle As String = "G翻牆懶人一键翻墙器"
 
     Private NoIE As Boolean = False
     Private NoPAC As Boolean = False
     Private GoAgentFileName As String = "python27.exe" '"D:\FreeGoAgent Archive\Gfanqiang\goagent-local\python27.exe"
     Private GoAgentArguments As String = "proxy.py" '"""D:\FreeGoAgent Archive\Gfanqiang\goagent-local\proxy.py"""
-    Private GoAgentHomePage As String = "https://gfangqiang.googlecode.com/svn/home.html"
-    Private GoAgentMessage As String = "message.txt"
+    Private GoWrapperHomePage As String = "https://gfangqiang.googlecode.com/svn/home.html"
+    Private GoWrapperMessage As String = "message.txt"
 
     <DllImport("WININET.DLL")> Private Shared Function InternetSetOption(ByVal hInternet As IntPtr, ByVal dwOption As Integer, ByVal lpBuffer As IntPtr, ByVal lpdwBufferLength As Integer) As Boolean
     End Function
@@ -46,7 +46,6 @@ Public Class GoWrapper
 
     Private Sub HandleGoWrapperLoad(sender As Object, e As EventArgs) Handles MyBase.Load
         Logger("GoWrapper Initializing...")
-        Me.Text += " - " + GoTitle
 
         ' Prase GoWrapper Argument
         Dim Arguments() As String, ArgumentsCount As Integer, CurrentArgument As String
@@ -66,17 +65,22 @@ Public Class GoWrapper
                 GoAgentArguments = CurrentArgument.Replace("--arguments=", "")
                 Logger("GoAgent Arguments:" + GoAgentArguments)
             ElseIf CurrentArgument.StartsWith("--homepage=") Then
-                GoAgentHomePage = CurrentArgument.Replace("--homepage=", "")
-                Logger("GoAgent HomePage:" + GoAgentHomePage)
+                GoWrapperHomePage = CurrentArgument.Replace("--homepage=", "")
+                Logger("GoWrapper HomePage:" + GoWrapperHomePage)
             ElseIf CurrentArgument.StartsWith("--message=") Then
-                GoAgentMessage = CurrentArgument.Replace("--message=", "")
-                Logger("GoAgent Message: " + GoAgentMessage)
+                GoWrapperMessage = CurrentArgument.Replace("--message=", "")
+                Logger("GoWrapper Message: " + GoWrapperMessage)
+            ElseIf CurrentArgument.StartsWith("--title=") Then
+                GoWrapperTitle = CurrentArgument.Replace("--title=", "")
+                Logger("GoWrapper Title: " + GoWrapperTitle)
             End If
         Next ArgumentsCount
 
-        If GoAgentMessage IsNot Nothing Then
-            If My.Computer.FileSystem.FileExists(GoAgentMessage) Then
-                Dim message() As String = My.Computer.FileSystem.ReadAllText(GoAgentMessage).Split(Environment.NewLine)
+        Me.Text += " - " + GoWrapperTitle
+
+        If GoWrapperMessage IsNot Nothing Then
+            If My.Computer.FileSystem.FileExists(GoWrapperMessage) Then
+                Dim message() As String = My.Computer.FileSystem.ReadAllText(GoWrapperMessage).Split(Environment.NewLine)
                 For Each line As String In message
                     Logger(line)
                 Next
@@ -115,14 +119,14 @@ Public Class GoWrapper
         End Try
 
         If NoIE = False Then
-            System.Diagnostics.Process.Start("iexplore", GoAgentHomePage)
+            OpenURL(GoWrapperHomePage)
         End If
 
     End Sub
 
     Private Sub HandleGoWrapperResize(sender As Object, e As EventArgs) Handles Me.Resize
         outbox.Width = Width - 40
-        outbox.Height = Height - 80
+        outbox.Height = Height - 120
     End Sub
 
     Private Sub HandleNormalCloseRestorePAC(sender As Object, e As EventArgs) Handles Menu_NormalCloseRestorePAC.Click
@@ -161,7 +165,27 @@ Public Class GoWrapper
         About.Show()
     End Sub
 
+    Private Sub OpenURL(URL As String)
+        System.Diagnostics.Process.Start("iexplore", URL)
+    End Sub
+
     Private Sub Menu_Link_iFanQiang_Click(sender As Object, e As EventArgs) Handles Menu_Link_iFanQiang.Click
-        System.Diagnostics.Process.Start("iexplore", "http://www.ifanqiang.com/")
+        OpenURL("http://www.ifanqiang.com/")
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        OpenURL("http://www.facebook.com")
+    End Sub
+
+    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+        OpenURL("http://www.hkreporter.com")
+    End Sub
+
+    Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles ToolStripButton3.Click
+        OpenURL("http://www.ifanqiang.com")
+    End Sub
+
+    Private Sub ToolStripButton4_Click(sender As Object, e As EventArgs) Handles ToolStripButton4.Click
+        OpenURL("http://www.youtube.com")
     End Sub
 End Class

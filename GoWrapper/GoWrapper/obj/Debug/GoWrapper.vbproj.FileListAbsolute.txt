@@ -48,3 +48,15 @@ D:\workspace\GoWrapper\GoWrapper\obj\Debug\GoWrapper.About.resources
 D:\workspace\GoWrapper\GoWrapper\obj\Debug\GoWrapper.GoWrapper.resources
 D:\workspace\GoWrapper\GoWrapper\obj\Debug\GoWrapper.Resources.resources
 D:\workspace\GoWrapper\GoWrapper\obj\Debug\GoWrapper.vbproj.GenerateResource.Cache
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\bin\Debug\GoWrapper.exe.config
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.exe
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.xml
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.pdb
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\bin\Debug\GoWrapper.exe
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\bin\Debug\GoWrapper.pdb
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\bin\Debug\GoWrapper.xml
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.vbprojResolveAssemblyReference.cache
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.About.resources
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.GoWrapper.resources
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.Resources.resources
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.vbproj.GenerateResource.Cache

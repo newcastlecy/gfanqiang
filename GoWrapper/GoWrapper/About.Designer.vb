@@ -168,7 +168,7 @@ Partial Class About
         Me.Padding = New System.Windows.Forms.Padding(9, 8, 9, 8)
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "關於"
+        Me.Text = "关於"
         Me.TableLayoutPanel.ResumeLayout(False)
         Me.TableLayoutPanel.PerformLayout()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
