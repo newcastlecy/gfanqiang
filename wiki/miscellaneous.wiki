@@ -53,6 +53,14 @@ G翻墙初期，因为没有找到办法解决自动设置PAC的问题，故此�
 <li>G翻墙只是一个实验性的项目，下一步我们将会号召香港网民借出闲置的频宽来解放天朝网络。</li>
 </ul>
 
+==呜谢==
+<ul>
+<li>phus.lu</li>
+<li>wwqgtxx</li>
+<li>ring-hacker</li>
+<li>小小萱</li>
+</ul>
+
 == Details ==
 
 Add your content here.  Format your content with:
