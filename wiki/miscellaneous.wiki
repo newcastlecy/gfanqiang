@@ -16,6 +16,8 @@ G翻墙初期，因为没有找到办法解决自动设置PAC的问题，故此�
 
 可恨的是，目前还没有办法把.NET程序用到的.NET Framework DLL封装到.NET程序上，故此只好保留火狐版本。
 
+= 後继者 =
+
 = Details =
 
 Add your content here.  Format your content with:
