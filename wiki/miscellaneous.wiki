@@ -1,6 +1,6 @@
 #labels 一堆重关重要的东西
 = 缘起 =
-2012年11月，G翻墙计划，原意是制作一个很简单的GoAgent载入器和公用APPID项目，希望普及GoAgent的使用以及将使用GoAgent的过程简单化、一键化，让国内网友无须部署和任何知识的情况下都能够傻瓜式一键翻墙。
+2012年11月，受到轮子翻墙器系列的一键操作启发，和wwqgtxx的公用APPID项目；G翻墙计划原意是制作一个很简单的GoAgent载入器和公用APPID项目，希望普及GoAgent的使用以及将使用GoAgent的过程简单化、一键化，让国内网友无须部署和任何知识的情况下都能够傻瓜式一键翻墙。
 
 = 命名 =
 想过很多个名称，gLoader、AutoGoAgent，算了，反正目的是为了普及使用，干脆别用英文字词，叫「G翻墙」吧，结果就把拼音拼错了做GFangQiang(而不是GFanQiang)，而且是第一版G翻墙发布後一个月才被提醒，故此G翻墙在Googlecode目前存在分别两个项目地址。
@@ -17,6 +17,7 @@ G翻墙初期，因为没有找到办法解决自动设置PAC的问题，故此�
 可恨的是，目前还没有办法把.NET程序用到的.NET Framework DLL封装到.NET程序上，故此只好保留火狐版本。
 
 = 後继者 =
+目前已知至少有三个软件项目分别承继了G翻墙的概念、源码或APPID：onion-project、wwqgtxx-goagent、gorome，将GoAgent一键翻墙的方法开枝散叶
 
 = Details =
 
