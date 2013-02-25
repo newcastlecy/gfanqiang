@@ -64,6 +64,7 @@ G翻墙初期，因为没有找到办法解决自动设置PAC的问题，故此�
 <li>wwqgtxx</li>
 <li>ring-hacker</li>
 <li>小小萱</li>
+<li>美博园</li>
 </ul>
 
 == Details ==
