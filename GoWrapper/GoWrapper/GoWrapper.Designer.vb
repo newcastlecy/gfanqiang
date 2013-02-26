@@ -34,12 +34,12 @@ Partial Class GoWrapper
         Me.Menu_Link_iFanQiang = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_About = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStrip = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStrip = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -73,20 +73,20 @@ Partial Class GoWrapper
         'Menu_NormalCloseClearPAC
         '
         Me.Menu_NormalCloseClearPAC.Name = "Menu_NormalCloseClearPAC"
-        Me.Menu_NormalCloseClearPAC.Size = New System.Drawing.Size(215, 22)
-        Me.Menu_NormalCloseClearPAC.Text = "正常退出並清除PAC"
+        Me.Menu_NormalCloseClearPAC.Size = New System.Drawing.Size(191, 22)
+        Me.Menu_NormalCloseClearPAC.Text = "退出並清除PAC(修復)"
         '
         'Menu_NormalCloseRestorePAC
         '
         Me.Menu_NormalCloseRestorePAC.Name = "Menu_NormalCloseRestorePAC"
-        Me.Menu_NormalCloseRestorePAC.Size = New System.Drawing.Size(215, 22)
-        Me.Menu_NormalCloseRestorePAC.Text = "正常退出並還原PAC(建議)"
+        Me.Menu_NormalCloseRestorePAC.Size = New System.Drawing.Size(191, 22)
+        Me.Menu_NormalCloseRestorePAC.Text = "退出並還原PAC(建議)"
         '
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.Enabled = False
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(215, 22)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(191, 22)
         Me.ToolStripMenuItem2.Text = "---"
         Me.ToolStripMenuItem2.Visible = False
         '
@@ -94,7 +94,7 @@ Partial Class GoWrapper
         '
         Me.ForceClose.Enabled = False
         Me.ForceClose.Name = "ForceClose"
-        Me.ForceClose.Size = New System.Drawing.Size(215, 22)
+        Me.ForceClose.Size = New System.Drawing.Size(191, 22)
         Me.ForceClose.Text = "強行退出"
         Me.ForceClose.Visible = False
         '
@@ -125,6 +125,12 @@ Partial Class GoWrapper
         Me.StatusStrip1.Size = New System.Drawing.Size(624, 22)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStrip
+        '
+        Me.ToolStrip.Name = "ToolStrip"
+        Me.ToolStrip.Size = New System.Drawing.Size(31, 17)
+        Me.ToolStrip.Text = "Test"
         '
         'ToolStrip1
         '
@@ -170,12 +176,6 @@ Partial Class GoWrapper
         Me.ToolStripButton4.Name = "ToolStripButton4"
         Me.ToolStripButton4.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton4.Text = "Youtube"
-        '
-        'ToolStrip
-        '
-        Me.ToolStrip.Name = "ToolStrip"
-        Me.ToolStrip.Size = New System.Drawing.Size(31, 17)
-        Me.ToolStrip.Text = "Test"
         '
         'GoWrapper
         '
