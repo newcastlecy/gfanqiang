@@ -30,16 +30,19 @@ Partial Class GoWrapper
         Me.Menu_NormalCloseRestorePAC = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForceClose = New System.Windows.Forms.ToolStripMenuItem()
-        Me.關於ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Menu_Link_iFanQiang = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_About = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStrip = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.StatusVersion = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton4 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.SayMovieToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.ThisAVToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -56,7 +59,7 @@ Partial Class GoWrapper
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.工具ToolStripMenuItem, Me.關於ToolStripMenuItem, Me.Menu_About})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.工具ToolStripMenuItem, Me.Menu_About})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(624, 24)
@@ -67,20 +70,20 @@ Partial Class GoWrapper
         '
         Me.工具ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Menu_NormalCloseClearPAC, Me.Menu_NormalCloseRestorePAC, Me.ToolStripMenuItem2, Me.ForceClose})
         Me.工具ToolStripMenuItem.Name = "工具ToolStripMenuItem"
-        Me.工具ToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.工具ToolStripMenuItem.Text = "工具"
+        Me.工具ToolStripMenuItem.Size = New System.Drawing.Size(87, 20)
+        Me.工具ToolStripMenuItem.Text = "GoWrapper"
         '
         'Menu_NormalCloseClearPAC
         '
         Me.Menu_NormalCloseClearPAC.Name = "Menu_NormalCloseClearPAC"
         Me.Menu_NormalCloseClearPAC.Size = New System.Drawing.Size(191, 22)
-        Me.Menu_NormalCloseClearPAC.Text = "退出並清除PAC(修復)"
+        Me.Menu_NormalCloseClearPAC.Text = "退出并清除PAC(修复)"
         '
         'Menu_NormalCloseRestorePAC
         '
         Me.Menu_NormalCloseRestorePAC.Name = "Menu_NormalCloseRestorePAC"
         Me.Menu_NormalCloseRestorePAC.Size = New System.Drawing.Size(191, 22)
-        Me.Menu_NormalCloseRestorePAC.Text = "退出並還原PAC(建議)"
+        Me.Menu_NormalCloseRestorePAC.Text = "退出并还原PAC(建议)"
         '
         'ToolStripMenuItem2
         '
@@ -98,43 +101,29 @@ Partial Class GoWrapper
         Me.ForceClose.Text = "強行退出"
         Me.ForceClose.Visible = False
         '
-        '關於ToolStripMenuItem
-        '
-        Me.關於ToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Menu_Link_iFanQiang})
-        Me.關於ToolStripMenuItem.Name = "關於ToolStripMenuItem"
-        Me.關於ToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.關於ToolStripMenuItem.Text = "連結"
-        '
-        'Menu_Link_iFanQiang
-        '
-        Me.Menu_Link_iFanQiang.Name = "Menu_Link_iFanQiang"
-        Me.Menu_Link_iFanQiang.Size = New System.Drawing.Size(163, 22)
-        Me.Menu_Link_iFanQiang.Text = "愛翻牆 翻牆導航"
-        '
         'Menu_About
         '
         Me.Menu_About.Name = "Menu_About"
         Me.Menu_About.Size = New System.Drawing.Size(44, 20)
-        Me.Menu_About.Text = "關於"
+        Me.Menu_About.Text = "关於"
         '
         'StatusStrip1
         '
-        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStrip})
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusVersion})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 420)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(624, 22)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
-        'ToolStrip
+        'StatusVersion
         '
-        Me.ToolStrip.Name = "ToolStrip"
-        Me.ToolStrip.Size = New System.Drawing.Size(31, 17)
-        Me.ToolStrip.Text = "Test"
+        Me.StatusVersion.Name = "StatusVersion"
+        Me.StatusVersion.Size = New System.Drawing.Size(0, 17)
         '
         'ToolStrip1
         '
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripDropDownButton1, Me.ToolStripLabel1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(624, 25)
@@ -177,6 +166,39 @@ Partial Class GoWrapper
         Me.ToolStripButton4.Size = New System.Drawing.Size(23, 22)
         Me.ToolStripButton4.Text = "Youtube"
         '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripDropDownButton1
+        '
+        Me.ToolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripDropDownButton1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SayMovieToolStripMenuItem, Me.ThisAVToolStripMenuItem})
+        Me.ToolStripDropDownButton1.Image = Global.GoWrapper.My.Resources.Resources.folder
+        Me.ToolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripDropDownButton1.Name = "ToolStripDropDownButton1"
+        Me.ToolStripDropDownButton1.Size = New System.Drawing.Size(29, 22)
+        Me.ToolStripDropDownButton1.Text = "ToolStripDropDownButton1"
+        '
+        'SayMovieToolStripMenuItem
+        '
+        Me.SayMovieToolStripMenuItem.Name = "SayMovieToolStripMenuItem"
+        Me.SayMovieToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SayMovieToolStripMenuItem.Text = "SayMove"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(56, 22)
+        Me.ToolStripLabel1.Text = "成人资源"
+        '
+        'ThisAVToolStripMenuItem
+        '
+        Me.ThisAVToolStripMenuItem.Name = "ThisAVToolStripMenuItem"
+        Me.ThisAVToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ThisAVToolStripMenuItem.Text = "ThisAV"
+        '
         'GoWrapper
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -207,8 +229,6 @@ Partial Class GoWrapper
     Friend WithEvents Menu_NormalCloseRestorePAC As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ForceClose As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents 關於ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents Menu_Link_iFanQiang As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Menu_About As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
@@ -216,6 +236,11 @@ Partial Class GoWrapper
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton3 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton4 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStrip As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents StatusVersion As System.Windows.Forms.ToolStripStatusLabel
+    Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripDropDownButton1 As System.Windows.Forms.ToolStripDropDownButton
+    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents SayMovieToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ThisAVToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

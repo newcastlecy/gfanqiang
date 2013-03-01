@@ -9,7 +9,7 @@ Imports System.Runtime.InteropServices
 ' 檢閱組件屬性的值
 
 <Assembly: AssemblyTitle("GoWrapper")> 
-<Assembly: AssemblyDescription("我是一个很简单的GoAgent外壳，源码可於https://code.google.com/p/gfanqiang/source/browse/ 找到")> 
+<Assembly: AssemblyDescription("我是一个很简单的GoAgent外壳，是Gfanqiang计划的一部份，方便有.NET Framework的孩子一键翻墙。 源码可於https://code.google.com/p/gfanqiang/source/browse/ 找到")> 
 <Assembly: AssemblyCompany("香港自由网络研究中心")> 
 <Assembly: AssemblyProduct("GoWrapper")> 
 <Assembly: AssemblyCopyright("根据通用公共授权第三版发行")> 

@@ -19,6 +19,10 @@ GoWrapper
 	<summary>
   查詢型別 System.Drawing.Bitmap 的當地語系化資源。
 </summary>
+</member><member name="P:GoWrapper.My.Resources.Resources.folder">
+	<summary>
+  查詢型別 System.Drawing.Bitmap 的當地語系化資源。
+</summary>
 </member><member name="P:GoWrapper.My.Resources.Resources.hkreporter">
 	<summary>
   查詢型別 System.Drawing.Bitmap 的當地語系化資源。

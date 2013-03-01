@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  查詢型別 System.Drawing.Bitmap 的當地語系化資源。
         '''</summary>
+        Friend ReadOnly Property folder() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("folder", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查詢型別 System.Drawing.Bitmap 的當地語系化資源。
+        '''</summary>
         Friend ReadOnly Property hkreporter() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("hkreporter", resourceCulture)
