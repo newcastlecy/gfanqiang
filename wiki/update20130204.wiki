@@ -1,5 +1,3 @@
-#summary One-sentence summary of this page.
-
 = 2013年2月24日重大更新 =
 <p>以GoWrapper实现IE自动设置PAC，再无须火狐，火狐本来可以完成历史任务，但遗憾的是需要.NET Framework 2.0才能运作，故此考虑到使用XP但又没权限安装.NET Framework 2.0和喜欢用独立浏览器翻墙的童鞋，会保留传统火狐版(用中国大陆用语就是「经典版」)</p>
 <p>发行命名方式也改变了，传统的的「懒人包」重命名为「火狐包」(FF)，而不带火狐的Standalone版本则重命名为「懒人包」(SA)，并推荐下载SA版。</p>
