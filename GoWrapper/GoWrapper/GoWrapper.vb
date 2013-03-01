@@ -77,6 +77,7 @@ Public Class GoWrapper
         Next ArgumentsCount
 
         Me.Text += " - " + GoWrapperTitle
+        StatusVersion.Text = "GoWrapper " + My.Application.Info.Version.ToString()
 
         If GoWrapperMessage IsNot Nothing Then
             If My.Computer.FileSystem.FileExists(GoWrapperMessage) Then
@@ -169,7 +170,7 @@ Public Class GoWrapper
         System.Diagnostics.Process.Start("iexplore", URL)
     End Sub
 
-    Private Sub Menu_Link_iFanQiang_Click(sender As Object, e As EventArgs) Handles Menu_Link_iFanQiang.Click
+    Private Sub Menu_Link_iFanQiang_Click(sender As Object, e As EventArgs)
         OpenURL("http://www.ifanqiang.com/")
     End Sub
 
@@ -187,5 +188,13 @@ Public Class GoWrapper
 
     Private Sub ToolStripButton4_Click(sender As Object, e As EventArgs) Handles ToolStripButton4.Click
         OpenURL("http://www.youtube.com")
+    End Sub
+
+    Private Sub SayMovieToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SayMovieToolStripMenuItem.Click
+        OpenURL("http://say-move.org/a/tw/")
+    End Sub
+
+    Private Sub ThisAVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ThisAVToolStripMenuItem.Click
+        OpenURL("http://thisav.com/")
     End Sub
 End Class

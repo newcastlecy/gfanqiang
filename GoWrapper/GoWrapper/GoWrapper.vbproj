@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gfanqiang.ico" />
+    <None Include="ico\folder.png" />
     <None Include="ico\youtube.png" />
     <None Include="ico\ifq.png" />
     <None Include="ico\hkreporter.png" />
