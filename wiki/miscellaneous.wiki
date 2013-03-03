@@ -62,15 +62,13 @@ G翻墙是一个失败作，事前没有经过详细计划，不过就一腔热�
 即使是再安全、高效、方便的方法也好，还是请当心方滨兴就站在你後面。
 
 == 呜谢 ==
-<ul>
-<li>phus.lu</li>
-<li>wwqgtxx</li>
-<li>ring-hacker</li>
-<li>小小萱</li>
-<li>美博园</li>
-<li>魇儛乾土申</li>
-<li>Angus Wan</li>
-</ul>
+* phus.lu
+* wwqgtxx
+* ring-hacker
+* 小小萱
+* 美博园
+* 魇儛乾土申
+* Angus Wan
 
 == Details ==
 
