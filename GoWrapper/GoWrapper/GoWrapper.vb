@@ -125,9 +125,9 @@ Public Class GoWrapper
 
     Private Sub HandleGoWrapperResize(sender As Object, e As EventArgs) Handles Me.Resize
         outbox.Width = Width - 240
-        outbox.Height = Height - 120
+        outbox.Height = Height - 90
         BookmarkTree.Left = Width - 220
-        BookmarkTree.Height = Height - 120
+        BookmarkTree.Height = Me.Height - 90
     End Sub
 
     Private Sub HandleNormalCloseRestorePAC(sender As Object, e As EventArgs) Handles Menu_NormalCloseRestorePAC.Click
@@ -215,10 +215,16 @@ Public Class GoWrapper
         Dim Twitter = BookmarkTree.Nodes(0).Nodes.Add("https://www.twitter.com", "推特", 6, 6)
         Twitter.Nodes.Add("https://twitter.com/aiww", "艾未未", 6, 6)
 
+        Dim Adult = BookmarkTree.Nodes(0).Nodes.Add("Null", "成人资源", 0, 0)
+        Adult.Nodes.Add("https://www.thisav.com", "ThisAV", 0, 0)
+        Adult.Nodes.Add("https://say-move.org/a/tw/", "SayMove", 0, 0)
+
         tNode.Expand()
     End Sub
 
     Private Sub BookmarkTree_NodeMouseDoubleClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles BookmarkTree.NodeMouseDoubleClick
-        OpenURL(e.Node.Name)
+        If e.Node.Name <> "Null" Then
+            OpenURL(e.Node.Name)
+        End If
     End Sub
 End Class

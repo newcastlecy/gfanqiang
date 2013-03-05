@@ -53,7 +53,7 @@ Partial Class GoWrapper
         '
         'outbox
         '
-        Me.outbox.Location = New System.Drawing.Point(12, 52)
+        Me.outbox.Location = New System.Drawing.Point(12, 27)
         Me.outbox.Multiline = True
         Me.outbox.Name = "outbox"
         Me.outbox.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -133,6 +133,7 @@ Partial Class GoWrapper
         Me.ToolStrip1.Size = New System.Drawing.Size(704, 25)
         Me.ToolStrip1.TabIndex = 3
         Me.ToolStrip1.Text = "ToolStrip1"
+        Me.ToolStrip1.Visible = False
         '
         'ToolStripButton1
         '
@@ -207,7 +208,7 @@ Partial Class GoWrapper
         '
         Me.BookmarkTree.ImageIndex = 0
         Me.BookmarkTree.ImageList = Me.BookmarkIcon
-        Me.BookmarkTree.Location = New System.Drawing.Point(435, 52)
+        Me.BookmarkTree.Location = New System.Drawing.Point(435, 27)
         Me.BookmarkTree.Name = "BookmarkTree"
         Me.BookmarkTree.SelectedImageIndex = 0
         Me.BookmarkTree.Size = New System.Drawing.Size(190, 365)
