@@ -46,8 +46,7 @@ Public Class GoWrapper
 
     Private Sub HandleGoWrapperLoad(sender As Object, e As EventArgs) Handles MyBase.Load
         Logger("GoWrapper Initializing...")
-
-        ' Prase GoWrapper Argument
+        InitBookmarkTree()
         Dim Arguments() As String, ArgumentsCount As Integer, CurrentArgument As String
         Arguments = System.Environment.GetCommandLineArgs
         For ArgumentsCount = 0 To UBound(Arguments)
@@ -114,7 +113,6 @@ Public Class GoWrapper
             GoAgent.BeginOutputReadLine()
             GoAgent.BeginErrorReadLine()
         Catch ex As InvalidOperationException
-            'MsgBox(ex.ToString())
             Logger("Exception:")
             Logger(ex.ToString())
         End Try
@@ -126,8 +124,10 @@ Public Class GoWrapper
     End Sub
 
     Private Sub HandleGoWrapperResize(sender As Object, e As EventArgs) Handles Me.Resize
-        outbox.Width = Width - 40
+        outbox.Width = Width - 240
         outbox.Height = Height - 120
+        BookmarkTree.Left = Width - 220
+        BookmarkTree.Height = Height - 120
     End Sub
 
     Private Sub HandleNormalCloseRestorePAC(sender As Object, e As EventArgs) Handles Menu_NormalCloseRestorePAC.Click
@@ -196,5 +196,29 @@ Public Class GoWrapper
 
     Private Sub ThisAVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ThisAVToolStripMenuItem.Click
         OpenURL("http://thisav.com/")
+    End Sub
+
+    Private Sub InitBookmarkTree()
+
+        Dim tNode As TreeNode
+        tNode = BookmarkTree.Nodes.Add("推荐连接")
+
+        Dim Vjmedia = BookmarkTree.Nodes(0).Nodes.Add("http://www.vjmedia.com.hk", "辅仁网", 7, 7)
+
+        Dim IFQ = BookmarkTree.Nodes(0).Nodes.Add("http://www.ifanqiang.com", "爱翻墙网址导航", 1, 1)
+        Dim Youtube = BookmarkTree.Nodes(0).Nodes.Add("https://www.youtube.com", "Youtube", 3, 3)
+
+        Dim Facebook = BookmarkTree.Nodes(0).Nodes.Add("https://www.facebook.com", "Facebook", 2, 2)
+        Facebook.Nodes.Add("https://www.facebook.com/neverforget8964", "毋忘六四", 2, 2)
+        Facebook.Nodes.Add("https://www.facebook.com/groups/fanqianglab/?fref=ts", "翻墙科技研究中心", 2, 2)
+
+        Dim Twitter = BookmarkTree.Nodes(0).Nodes.Add("https://www.twitter.com", "推特", 6, 6)
+        Twitter.Nodes.Add("https://twitter.com/aiww", "艾未未", 6, 6)
+
+        tNode.Expand()
+    End Sub
+
+    Private Sub BookmarkTree_NodeMouseDoubleClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles BookmarkTree.NodeMouseDoubleClick
+        OpenURL(e.Node.Name)
     End Sub
 End Class
