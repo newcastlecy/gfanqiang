@@ -22,6 +22,7 @@ Partial Class GoWrapper
     '請不要使用程式碼編輯器進行修改。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GoWrapper))
         Me.outbox = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -41,8 +42,10 @@ Partial Class GoWrapper
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripDropDownButton1 = New System.Windows.Forms.ToolStripDropDownButton()
         Me.SayMovieToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ThisAVToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.BookmarkTree = New System.Windows.Forms.TreeView()
+        Me.BookmarkIcon = New System.Windows.Forms.ImageList(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -53,16 +56,17 @@ Partial Class GoWrapper
         Me.outbox.Location = New System.Drawing.Point(12, 52)
         Me.outbox.Multiline = True
         Me.outbox.Name = "outbox"
-        Me.outbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.outbox.Size = New System.Drawing.Size(600, 378)
+        Me.outbox.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.outbox.Size = New System.Drawing.Size(417, 378)
         Me.outbox.TabIndex = 0
+        Me.outbox.WordWrap = False
         '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.工具ToolStripMenuItem, Me.Menu_About})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(624, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(704, 24)
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -112,7 +116,7 @@ Partial Class GoWrapper
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StatusVersion})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 420)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(624, 22)
+        Me.StatusStrip1.Size = New System.Drawing.Size(704, 22)
         Me.StatusStrip1.TabIndex = 2
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -126,7 +130,7 @@ Partial Class GoWrapper
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripSeparator1, Me.ToolStripDropDownButton1, Me.ToolStripLabel1})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(624, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(704, 25)
         Me.ToolStrip1.TabIndex = 3
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -184,8 +188,14 @@ Partial Class GoWrapper
         'SayMovieToolStripMenuItem
         '
         Me.SayMovieToolStripMenuItem.Name = "SayMovieToolStripMenuItem"
-        Me.SayMovieToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SayMovieToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
         Me.SayMovieToolStripMenuItem.Text = "SayMove"
+        '
+        'ThisAVToolStripMenuItem
+        '
+        Me.ThisAVToolStripMenuItem.Name = "ThisAVToolStripMenuItem"
+        Me.ThisAVToolStripMenuItem.Size = New System.Drawing.Size(129, 22)
+        Me.ThisAVToolStripMenuItem.Text = "ThisAV"
         '
         'ToolStripLabel1
         '
@@ -193,17 +203,35 @@ Partial Class GoWrapper
         Me.ToolStripLabel1.Size = New System.Drawing.Size(56, 22)
         Me.ToolStripLabel1.Text = "成人资源"
         '
-        'ThisAVToolStripMenuItem
+        'BookmarkTree
         '
-        Me.ThisAVToolStripMenuItem.Name = "ThisAVToolStripMenuItem"
-        Me.ThisAVToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ThisAVToolStripMenuItem.Text = "ThisAV"
+        Me.BookmarkTree.ImageIndex = 0
+        Me.BookmarkTree.ImageList = Me.BookmarkIcon
+        Me.BookmarkTree.Location = New System.Drawing.Point(435, 52)
+        Me.BookmarkTree.Name = "BookmarkTree"
+        Me.BookmarkTree.SelectedImageIndex = 0
+        Me.BookmarkTree.Size = New System.Drawing.Size(190, 365)
+        Me.BookmarkTree.TabIndex = 4
+        '
+        'BookmarkIcon
+        '
+        Me.BookmarkIcon.ImageStream = CType(resources.GetObject("BookmarkIcon.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.BookmarkIcon.TransparentColor = System.Drawing.Color.Transparent
+        Me.BookmarkIcon.Images.SetKeyName(0, "folder.png")
+        Me.BookmarkIcon.Images.SetKeyName(1, "ifq.png")
+        Me.BookmarkIcon.Images.SetKeyName(2, "fb.png")
+        Me.BookmarkIcon.Images.SetKeyName(3, "youtube.png")
+        Me.BookmarkIcon.Images.SetKeyName(4, "hkreporter.png")
+        Me.BookmarkIcon.Images.SetKeyName(5, "d100.ico")
+        Me.BookmarkIcon.Images.SetKeyName(6, "twitter.png")
+        Me.BookmarkIcon.Images.SetKeyName(7, "vjmedia.jpg")
         '
         'GoWrapper
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(624, 442)
+        Me.ClientSize = New System.Drawing.Size(704, 442)
+        Me.Controls.Add(Me.BookmarkTree)
         Me.Controls.Add(Me.ToolStrip1)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.outbox)
@@ -242,5 +270,7 @@ Partial Class GoWrapper
     Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents SayMovieToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ThisAVToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BookmarkTree As System.Windows.Forms.TreeView
+    Friend WithEvents BookmarkIcon As System.Windows.Forms.ImageList
 
 End Class
