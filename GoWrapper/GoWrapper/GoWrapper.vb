@@ -170,54 +170,68 @@ Public Class GoWrapper
         System.Diagnostics.Process.Start("iexplore", URL)
     End Sub
 
-    Private Sub Menu_Link_iFanQiang_Click(sender As Object, e As EventArgs)
-        OpenURL("http://www.ifanqiang.com/")
-    End Sub
-
-    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
-        OpenURL("http://www.facebook.com")
-    End Sub
-
-    Private Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
-        OpenURL("http://www.hkreporter.com")
-    End Sub
-
-    Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles ToolStripButton3.Click
-        OpenURL("http://www.ifanqiang.com")
-    End Sub
-
-    Private Sub ToolStripButton4_Click(sender As Object, e As EventArgs) Handles ToolStripButton4.Click
-        OpenURL("http://www.youtube.com")
-    End Sub
-
-    Private Sub SayMovieToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SayMovieToolStripMenuItem.Click
-        OpenURL("http://say-move.org/a/tw/")
-    End Sub
-
-    Private Sub ThisAVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ThisAVToolStripMenuItem.Click
-        OpenURL("http://thisav.com/")
-    End Sub
+    'Private Sub Menu_Link_iFanQiang_Click(sender As Object, e As EventArgs)
+    'OpenURL("http://www.ifanqiang.com/")
+    'End Sub
+    '
+    ''Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+    '    OpenURL("http://www.facebook.com")
+    'End Sub
+    '
+    'Priv() 'ate Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
+    'OpenURL("http://www.hkreporter.com")
+    'End Sub
+    '
+    'Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles ToolStripButton3.Click
+    'OpenURL("http://www.ifanqiang.com")
+    'End Sub
+    '
+    'Private Sub ToolStripButton4_Click(sender As Object, e As EventArgs) Handles ToolStripButton4.Click
+    'OpenURL("http://www.youtube.com")
+    'End Sub
+    '
+    'Private Sub SayMovieToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SayMovieToolStripMenuItem.Click
+    'OpenURL("http://say-move.org/a/tw/")
+    'End Sub
+    '
+    'Private Sub ThisAVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ThisAVToolStripMenuItem.Click
+    'OpenURL("http://thisav.com/")
+    '    End Sub
 
     Private Sub InitBookmarkTree()
 
         Dim tNode As TreeNode
         tNode = BookmarkTree.Nodes.Add("推荐连接")
 
-        Dim Vjmedia = BookmarkTree.Nodes(0).Nodes.Add("http://www.vjmedia.com.hk", "辅仁网", 7, 7)
-
         Dim IFQ = BookmarkTree.Nodes(0).Nodes.Add("http://www.ifanqiang.com", "爱翻墙网址导航", 1, 1)
+        Dim Vjmedia = BookmarkTree.Nodes(0).Nodes.Add("http://www.vjmedia.com.hk", "辅仁网", 7, 7)
+        Dim TheHouseNews = BookmarkTree.Nodes(0).Nodes.Add("http://www.thehousenews.com", "主场新闻", 10, 10)
+        Dim PassionTimes = BookmarkTree.Nodes(0).Nodes.Add("http://www.passiontimes.hk", "热血时报", 11, 11)
+        Dim InMediaHK = BookmarkTree.Nodes(0).Nodes.Add("http://www.inmediahk.net", "独立媒体", 12, 12)
+        Dim BotanWang = BookmarkTree.Nodes(0).Nodes.Add("http://botanwang.com", "博谈网", 14, 14)
+
         Dim Youtube = BookmarkTree.Nodes(0).Nodes.Add("https://www.youtube.com", "Youtube", 3, 3)
 
         Dim Facebook = BookmarkTree.Nodes(0).Nodes.Add("https://www.facebook.com", "Facebook", 2, 2)
         Facebook.Nodes.Add("https://www.facebook.com/neverforget8964", "毋忘六四", 2, 2)
         Facebook.Nodes.Add("https://www.facebook.com/groups/fanqianglab/?fref=ts", "翻墙科技研究中心", 2, 2)
 
+        Dim Wiki = BookmarkTree.Nodes(0).Nodes.Add("https://zh.wikipedia.org", "维基百科", 15, 15)
+        Wiki.Nodes.Add("http://zh.wikipedia.org/wiki/%E5%85%AD%E5%9B%9B%E4%BA%8B%E4%BB%B6", "8964", 15, 15)
+
         Dim Twitter = BookmarkTree.Nodes(0).Nodes.Add("https://www.twitter.com", "推特", 6, 6)
         Twitter.Nodes.Add("https://twitter.com/aiww", "艾未未", 6, 6)
 
+        Dim Dir_Weiquan = BookmarkTree.Nodes(0).Nodes.Add("Null", "维权", 0, 0)
+        Dir_Weiquan.Nodes.Add("http://www.weiquanwang.org/", "维权网", 13, 13)
+        Dir_Weiquan.Nodes.Add("http://www.64tianwang.com/", "六四天网", 0, 0)
+
+        Dim Dir_JinWwen = BookmarkTree.Nodes(0).Nodes.Add("Null", "中国禁闻", 0, 0)
+        Dir_JinWwen.Nodes.Add("http://www.molihua.org/", "中国茉莉花革命", 16, 16)
+
         Dim Adult = BookmarkTree.Nodes(0).Nodes.Add("Null", "成人资源", 0, 0)
-        Adult.Nodes.Add("https://www.thisav.com", "ThisAV", 0, 0)
-        Adult.Nodes.Add("https://say-move.org/a/tw/", "SayMove", 0, 0)
+        Adult.Nodes.Add("https://www.thisav.com", "ThisAV", 8, 8)
+        Adult.Nodes.Add("https://say-move.org/a/tw/", "SayMove", 9, 9)
 
         tNode.Expand()
     End Sub
