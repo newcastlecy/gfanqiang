@@ -226,6 +226,15 @@ Partial Class GoWrapper
         Me.BookmarkIcon.Images.SetKeyName(5, "d100.ico")
         Me.BookmarkIcon.Images.SetKeyName(6, "twitter.png")
         Me.BookmarkIcon.Images.SetKeyName(7, "vjmedia.jpg")
+        Me.BookmarkIcon.Images.SetKeyName(8, "favicon.png")
+        Me.BookmarkIcon.Images.SetKeyName(9, "saymove.png")
+        Me.BookmarkIcon.Images.SetKeyName(10, "thehousenews.jpg")
+        Me.BookmarkIcon.Images.SetKeyName(11, "passiontimes.png")
+        Me.BookmarkIcon.Images.SetKeyName(12, "inmediahk.gif")
+        Me.BookmarkIcon.Images.SetKeyName(13, "weiquanwang.ico")
+        Me.BookmarkIcon.Images.SetKeyName(14, "botanwang.png")
+        Me.BookmarkIcon.Images.SetKeyName(15, "wikipedia.ico")
+        Me.BookmarkIcon.Images.SetKeyName(16, "molihua.ico")
         '
         'GoWrapper
         '
