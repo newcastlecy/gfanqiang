@@ -54,6 +54,7 @@ Partial Class GoWrapper
         'outbox
         '
         Me.outbox.Location = New System.Drawing.Point(12, 27)
+        Me.outbox.MaxLength = 32768
         Me.outbox.Multiline = True
         Me.outbox.Name = "outbox"
         Me.outbox.ScrollBars = System.Windows.Forms.ScrollBars.Both

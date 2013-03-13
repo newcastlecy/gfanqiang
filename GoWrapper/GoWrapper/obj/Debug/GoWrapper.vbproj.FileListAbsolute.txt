@@ -59,3 +59,4 @@ D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.About.resources
 D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.GoWrapper.resources
 D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.Resources.resources
 D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.vbproj.GenerateResource.Cache
+D:\workspace\GoWrapper\GoWrapper\GoWrapper\obj\Debug\GoWrapper.vbprojResolveAssemblyReference.cache
