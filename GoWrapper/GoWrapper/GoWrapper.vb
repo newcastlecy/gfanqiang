@@ -121,6 +121,8 @@ Public Class GoWrapper
             OpenURL(GoWrapperHomePage)
         End If
 
+
+
     End Sub
 
     Private Sub HandleGoWrapperResize(sender As Object, e As EventArgs) Handles Me.Resize
@@ -145,16 +147,21 @@ Public Class GoWrapper
     Private Shared Sub OutputHandler(sendingProcess As Object, outLine As DataReceivedEventArgs)
         If Not String.IsNullOrEmpty(outLine.Data) Then
             Console.WriteLine(outLine.Data + Environment.NewLine)
+            'If GoWrapper.outbox.Lines.Length > 100 Then
+            'GoWrapper.outbox.Text = String.Join(vbNewLine, Split(GoWrapper.outbox.Text, vbNewLine), 1, Split(GoWrapper.outbox.Text, vbNewLine).Length - 1)
+            'End If
             GoWrapper.outbox.AppendText(outLine.Data + Environment.NewLine)
             GoWrapper.outbox.ScrollToCaret()
-
         End If
     End Sub
 
     Private Sub Logger(LogString As String)
+        'If outbox.Lines.Length > 100 Then
+        'outbox.Text = String.Join(vbNewLine, Split(outbox.Text, vbNewLine), 1, Split(outbox.Text, vbNewLine).Length - 1)
+        'End If
         Me.outbox.AppendText("[GoWrapper] " + LogString + Environment.NewLine)
         Me.outbox.ScrollToCaret()
-        Console.WriteLine(LogString)
+        'Console.WriteLine(LogString)
     End Sub
 
     'Private Sub HandleForceClose(sender As Object, e As EventArgs) Handles ForceClose.Click
