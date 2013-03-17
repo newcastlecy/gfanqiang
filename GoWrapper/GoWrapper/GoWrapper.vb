@@ -215,6 +215,7 @@ Public Class GoWrapper
         Dim TheHouseNews = BookmarkTree.Nodes(0).Nodes.Add("http://www.thehousenews.com", "主场新闻", 10, 10)
         Dim PassionTimes = BookmarkTree.Nodes(0).Nodes.Add("http://www.passiontimes.hk", "热血时报", 11, 11)
         Dim InMediaHK = BookmarkTree.Nodes(0).Nodes.Add("http://www.inmediahk.net", "独立媒体", 12, 12)
+        Dim HKReporter = BookmarkTree.Nodes(0).Nodes.Add("http://www.hkreporter.com", "香港人网", 4, 4)
         Dim BotanWang = BookmarkTree.Nodes(0).Nodes.Add("http://botanwang.com", "博谈网", 14, 14)
 
         Dim Youtube = BookmarkTree.Nodes(0).Nodes.Add("https://www.youtube.com", "Youtube", 3, 3)
@@ -239,6 +240,12 @@ Public Class GoWrapper
         Dim Adult = BookmarkTree.Nodes(0).Nodes.Add("Null", "成人资源", 0, 0)
         Adult.Nodes.Add("https://www.thisav.com", "ThisAV", 8, 8)
         Adult.Nodes.Add("https://say-move.org/a/tw/", "SayMove", 9, 9)
+
+        Dim Author = BookmarkTree.Nodes(0).Nodes.Add("Null", "联系作者", 0, 0)
+        Author.Nodes.Add("https://www.facebook.com/sora8964", "羊羊", 2, 2)
+        Author.Nodes.Add("https://www.facebook.com/why.yang", "杨匡", 2, 2)
+        Author.Nodes.Add("http://t.qq.com/sora8964", "羊羊", 0, 0)
+        Author.Nodes.Add("http://t.qq.com/fish039104", "杨匡", 0, 0)
 
         tNode.Expand()
     End Sub
