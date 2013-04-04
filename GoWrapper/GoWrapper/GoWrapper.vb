@@ -121,8 +121,6 @@ Public Class GoWrapper
             OpenURL(GoWrapperHomePage)
         End If
 
-
-
     End Sub
 
     Private Sub HandleGoWrapperResize(sender As Object, e As EventArgs) Handles Me.Resize
@@ -161,13 +159,8 @@ Public Class GoWrapper
         'End If
         Me.outbox.AppendText("[GoWrapper] " + LogString + Environment.NewLine)
         Me.outbox.ScrollToCaret()
-        'Console.WriteLine(LogString)
-    End Sub
 
-    'Private Sub HandleForceClose(sender As Object, e As EventArgs) Handles ForceClose.Click
-    '    Logger("Exit:" + vbTab + vbTab + "Force Exit!")
-    '    Process.GetCurrentProcess.Kill()
-    'End Sub
+    End Sub
 
     Private Sub ShowAbout(sender As Object, e As EventArgs) Handles Menu_About.Click
         About.Show()
@@ -176,34 +169,6 @@ Public Class GoWrapper
     Private Sub OpenURL(URL As String)
         System.Diagnostics.Process.Start("iexplore", URL)
     End Sub
-
-    'Private Sub Menu_Link_iFanQiang_Click(sender As Object, e As EventArgs)
-    'OpenURL("http://www.ifanqiang.com/")
-    'End Sub
-    '
-    ''Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
-    '    OpenURL("http://www.facebook.com")
-    'End Sub
-    '
-    'Priv() 'ate Sub ToolStripButton2_Click(sender As Object, e As EventArgs) Handles ToolStripButton2.Click
-    'OpenURL("http://www.hkreporter.com")
-    'End Sub
-    '
-    'Private Sub ToolStripButton3_Click(sender As Object, e As EventArgs) Handles ToolStripButton3.Click
-    'OpenURL("http://www.ifanqiang.com")
-    'End Sub
-    '
-    'Private Sub ToolStripButton4_Click(sender As Object, e As EventArgs) Handles ToolStripButton4.Click
-    'OpenURL("http://www.youtube.com")
-    'End Sub
-    '
-    'Private Sub SayMovieToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SayMovieToolStripMenuItem.Click
-    'OpenURL("http://say-move.org/a/tw/")
-    'End Sub
-    '
-    'Private Sub ThisAVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ThisAVToolStripMenuItem.Click
-    'OpenURL("http://thisav.com/")
-    '    End Sub
 
     Private Sub InitBookmarkTree()
 
