@@ -232,4 +232,8 @@ Public Class GoWrapper
             OpenURL(e.Node.Name)
         End If
     End Sub
+
+    Private Sub 清除ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 清除ToolStripMenuItem.Click
+        outbox.Text = ""
+    End Sub
 End Class
