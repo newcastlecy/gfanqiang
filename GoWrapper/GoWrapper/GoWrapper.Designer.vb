@@ -46,6 +46,7 @@ Partial Class GoWrapper
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.BookmarkTree = New System.Windows.Forms.TreeView()
         Me.BookmarkIcon = New System.Windows.Forms.ImageList(Me.components)
+        Me.清除ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -64,7 +65,7 @@ Partial Class GoWrapper
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.工具ToolStripMenuItem, Me.Menu_About})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.工具ToolStripMenuItem, Me.清除ToolStripMenuItem, Me.Menu_About})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(704, 24)
@@ -238,6 +239,12 @@ Partial Class GoWrapper
         Me.BookmarkIcon.Images.SetKeyName(16, "molihua.ico")
         Me.BookmarkIcon.Images.SetKeyName(17, "isun.png")
         '
+        '清除ToolStripMenuItem
+        '
+        Me.清除ToolStripMenuItem.Name = "清除ToolStripMenuItem"
+        Me.清除ToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.清除ToolStripMenuItem.Text = "清除"
+        '
         'GoWrapper
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -284,5 +291,6 @@ Partial Class GoWrapper
     Friend WithEvents ThisAVToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BookmarkTree As System.Windows.Forms.TreeView
     Friend WithEvents BookmarkIcon As System.Windows.Forms.ImageList
+    Friend WithEvents 清除ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
