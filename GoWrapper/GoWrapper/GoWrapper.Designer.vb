@@ -236,6 +236,7 @@ Partial Class GoWrapper
         Me.BookmarkIcon.Images.SetKeyName(14, "botanwang.png")
         Me.BookmarkIcon.Images.SetKeyName(15, "wikipedia.ico")
         Me.BookmarkIcon.Images.SetKeyName(16, "molihua.ico")
+        Me.BookmarkIcon.Images.SetKeyName(17, "isun.png")
         '
         'GoWrapper
         '

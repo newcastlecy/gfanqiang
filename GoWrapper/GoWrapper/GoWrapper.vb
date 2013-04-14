@@ -19,7 +19,8 @@ Public Class GoWrapper
     Private GoAgentFileName As String = "python27.exe" '"D:\FreeGoAgent Archive\Gfanqiang\goagent-local\python27.exe"
     Private GoAgentArguments As String = "proxy.py" '"""D:\FreeGoAgent Archive\Gfanqiang\goagent-local\proxy.py"""
     Private GoWrapperHomePage As String = "https://gfangqiang.googlecode.com/svn/home.html"
-    Private GoWrapperMessage As String = "message.txt"
+    Private GoWrapperMessage As String = "data\message.txt"
+    Private GoWrapperLove As String = "data\love.txt"
 
     <DllImport("WININET.DLL")> Private Shared Function InternetSetOption(ByVal hInternet As IntPtr, ByVal dwOption As Integer, ByVal lpBuffer As IntPtr, ByVal lpdwBufferLength As Integer) As Boolean
     End Function
@@ -69,6 +70,9 @@ Public Class GoWrapper
             ElseIf CurrentArgument.StartsWith("--message=") Then
                 GoWrapperMessage = CurrentArgument.Replace("--message=", "")
                 Logger("GoWrapper Message: " + GoWrapperMessage)
+            ElseIf CurrentArgument.StartsWith("--love") Then
+                GoWrapperMessage = CurrentArgument.Replace("--love=", "")
+                Logger("GoWrapper Love: " + GoWrapperLove)
             ElseIf CurrentArgument.StartsWith("--title=") Then
                 GoWrapperTitle = CurrentArgument.Replace("--title=", "")
                 Logger("GoWrapper Title: " + GoWrapperTitle)
@@ -84,6 +88,13 @@ Public Class GoWrapper
                 For Each line As String In message
                     Logger(line)
                 Next
+            End If
+        End If
+
+        If GoWrapperLove IsNot Nothing Then
+            If My.Computer.FileSystem.FileExists(GoWrapperLove) Then
+                Dim love As String = My.Computer.FileSystem.ReadAllText(GoWrapperLove)
+                Me.Text = Me.Text + " : " + love
             End If
         End If
 
@@ -182,6 +193,7 @@ Public Class GoWrapper
         Dim InMediaHK = BookmarkTree.Nodes(0).Nodes.Add("http://www.inmediahk.net", "独立媒体", 12, 12)
         Dim HKReporter = BookmarkTree.Nodes(0).Nodes.Add("http://www.hkreporter.com", "香港人网", 4, 4)
         Dim BotanWang = BookmarkTree.Nodes(0).Nodes.Add("http://botanwang.com", "博谈网", 14, 14)
+        Dim ISun = BookmarkTree.Nodes(0).Nodes.Add("http://www.isunaffairs.com/", "阳光时务", 17, 17)
 
         Dim Youtube = BookmarkTree.Nodes(0).Nodes.Add("https://www.youtube.com", "Youtube", 3, 3)
 
