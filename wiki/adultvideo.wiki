@@ -1,0 +1,15 @@
+#labels 成人串流视频网站兼容问题
+翻墙看流媒体视频网站擼管是好事情。
+
+尽管我们已尽力维护RangeFetch，但有时候还是会有不能看的问题，以下是已知的兼容状况：
+
+已知兼容的网站：
+* Youtube
+* NicoNico
+* Tube8
+* ThisAV
+
+已知不兼容的网站：
+* FC2 Saymove
+* Youjuzz
+* Cloud Movie
