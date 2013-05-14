@@ -1,12 +1,12 @@
-﻿Imports System
-Imports System.IO
+﻿Imports System.IO
 Imports System.Diagnostics
 Imports System.Text
 Imports System.Threading
 Imports System.ComponentModel
+Imports System.Runtime.InteropServices
 Imports Microsoft.Win32
 Imports Microsoft.VisualBasic
-Imports System.Runtime.InteropServices
+
 
 Public Class GoWrapper
     Private GoAgent As Process = New Process()
@@ -139,6 +139,12 @@ Public Class GoWrapper
         outbox.Height = Height - 90
         BookmarkTree.Left = Width - 220
         BookmarkTree.Height = Me.Height - 90
+
+        If (FormWindowState.Minimized = WindowState) Then
+            Me.Hide()
+            trayicon.Visible = True
+        End If
+
     End Sub
 
     Private Sub HandleNormalCloseRestorePAC(sender As Object, e As EventArgs) Handles Menu_NormalCloseRestorePAC.Click
@@ -234,6 +240,16 @@ Public Class GoWrapper
     End Sub
 
     Private Sub 清除ToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles 清除ToolStripMenuItem.Click
+        clean()
+    End Sub
+
+    Private Sub clean()
         outbox.Text = ""
+    End Sub
+
+    Private Sub trayicon_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles trayicon.MouseClick
+        Me.Show()
+        trayicon.Visible = False
+        WindowState = FormWindowState.Normal
     End Sub
 End Class
