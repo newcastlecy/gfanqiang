@@ -31,6 +31,7 @@ Partial Class GoWrapper
         Me.Menu_NormalCloseRestorePAC = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ForceClose = New System.Windows.Forms.ToolStripMenuItem()
+        Me.清除ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Menu_About = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.StatusVersion = New System.Windows.Forms.ToolStripStatusLabel()
@@ -46,7 +47,7 @@ Partial Class GoWrapper
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.BookmarkTree = New System.Windows.Forms.TreeView()
         Me.BookmarkIcon = New System.Windows.Forms.ImageList(Me.components)
-        Me.清除ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.trayicon = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
@@ -106,6 +107,12 @@ Partial Class GoWrapper
         Me.ForceClose.Size = New System.Drawing.Size(191, 22)
         Me.ForceClose.Text = "強行退出"
         Me.ForceClose.Visible = False
+        '
+        '清除ToolStripMenuItem
+        '
+        Me.清除ToolStripMenuItem.Name = "清除ToolStripMenuItem"
+        Me.清除ToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.清除ToolStripMenuItem.Text = "清除"
         '
         'Menu_About
         '
@@ -239,16 +246,17 @@ Partial Class GoWrapper
         Me.BookmarkIcon.Images.SetKeyName(16, "molihua.ico")
         Me.BookmarkIcon.Images.SetKeyName(17, "isun.png")
         '
-        '清除ToolStripMenuItem
+        'trayicon
         '
-        Me.清除ToolStripMenuItem.Name = "清除ToolStripMenuItem"
-        Me.清除ToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
-        Me.清除ToolStripMenuItem.Text = "清除"
+        Me.trayicon.Icon = CType(resources.GetObject("trayicon.Icon"), System.Drawing.Icon)
+        Me.trayicon.Text = "GoWrapper"
+        Me.trayicon.Visible = True
         '
         'GoWrapper
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(704, 442)
         Me.Controls.Add(Me.BookmarkTree)
         Me.Controls.Add(Me.ToolStrip1)
@@ -292,5 +300,6 @@ Partial Class GoWrapper
     Friend WithEvents BookmarkTree As System.Windows.Forms.TreeView
     Friend WithEvents BookmarkIcon As System.Windows.Forms.ImageList
     Friend WithEvents 清除ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents trayicon As System.Windows.Forms.NotifyIcon
 
 End Class
